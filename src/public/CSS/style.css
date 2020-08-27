@@ -1,0 +1,42 @@
+body{
+    background-image: linear-gradient(to right, lightskyblue, white);
+}
+h1{
+    font-family: Arial;
+    text-align: center;
+    color: deeppink;
+}
+h2{
+
+    font-family: Arial;
+    text-align: center;
+    color: red;
+}
+h3{
+    font-family: Arial;
+    text-align: center;
+    color: gold;
+}
+table{
+    text-align: center;
+    margin: auto;
+    border-style: solid;
+    background-color: green;
+}
+table, th, td{
+    border: 2px solid black;
+}
+
+table th{
+    background-image: linear-gradient(to right, white, pink);
+    font-family: Arial;
+}
+table td{
+    font-family: Georgia;
+    background-image: linear-gradient(to right, pink, indigo);
+}
+.mid{
+    text-align: center;
+}
+
+

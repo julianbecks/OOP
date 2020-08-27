@@ -1,0 +1,15 @@
+{
+    "require": {
+        "slim/slim": "^3",
+        "slim/php-view": "^2.0",
+        "monolog/monolog": "^2.0",
+        "robmorgan/phinx": "^0.5.1",
+        "slim/twig-view": "^2.5",
+        "doctrine/orm": "^2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Example\\": "classes/"
+        }
+    }
+}

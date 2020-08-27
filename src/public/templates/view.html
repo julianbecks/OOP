@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="../CSS/viewall.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>See all</title>
+</head>
+<body>
+    <form>
+        <img src="../shopware_trans.png" alt="Workplace" usemap="#workmap" width="200" height="40">
+        <map name="workmap">
+            <area shape="rect" coords="0,0,200,40" href="/home">
+        </map>
+        <div class="mid">
+            <h1>Alle Einträge</h1>   
+            <button formaction="/home">Hauptmenü</button>
+            <button formaction="/home/add">Neuer Eintrag</button><br><br>
+            <table>
+                <tr><th>Eintrag</th><th>Vorname</th><th>Nachname</th><th>Stadt</th><th>Inhalt</th><th>Datum</th></tr>
+                {% for entry in entries %}
+                    <tr>
+                        <td>{{ entry.Eintrag }}</td>
+                        <td>{{ entry.Vorname }} {{ entry.Nachname}}</td>
+                        <td>{{ entry.Stadt }}</td>
+                        <td>{{ entry.Inhalt }}</td>
+                        <td>{{ entry.Datum }}</td>
+                        <td><a href="delete?id={{entry.Eintrag}}">Löschen</a></td>
+                    </tr> 
+                {% endfor %}
+            </table>
+            <marquee width="705" height="55"><a href="https://www.shopware.com/" target="_blank"><img src="../shopware_trans.png" width="200" height="50"/></a></marquee>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+

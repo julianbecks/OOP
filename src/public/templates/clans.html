@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clan info</title>
+</head>
+<body>
+<form action="">
+    <table border="1">
+        <tr><th>ID</th><th>Battles</th><th>Member</th><th>Stronghold</th></tr>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.ClanID }}</td>
+            <td>{{ entry.Battles }}</td>
+            <td>{{ entry.Member }}</td>
+            <td>{{ entry.Stronghold }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button formaction="/home">home</button><br>
+</form>
+</body>
+</html>

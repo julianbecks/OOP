@@ -1,0 +1,27 @@
+table{
+    margin: auto;
+    background-color: blue;
+}
+
+table, th, td{
+    border: 2px solid black;
+}
+
+table th{
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+table td{
+    text-align: center;
+    background-color: white;
+}
+h1{
+    color: #0099ff;
+}
+
+.mid{
+    text-align: center;
+}
+

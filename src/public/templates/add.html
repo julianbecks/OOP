@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../CSS/background.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add</title>
+</head>
+<body>
+    <form>
+        <img src="../shopware_trans.png" alt="Workplace" usemap="#workmap" width="200" height="40">
+        <map name="workmap">
+            <area shape="rect" coords="0,0,200,40" href="/home">
+        </map>
+            
+        <script>
+            var Text = [];
+                    
+            function pushData(){
+                Text.shift(); 
+                var inputFirstname = document.querySelector('#VN');
+                var inputLastname = document.querySelector('#NN');
+                var inputCity = document.querySelector('#Stadt');
+                var inputText = document.querySelector('#Inhalt');
+                        
+                Text.push(inputFirstname, inputLastname, inputCity, inputText);
+            
+                if(Text[0].value !="" && Text[1].value != "" && Text[2].value != "" && Text[3].value != ""){
+                    document.querySelector('#add').disabled = false;
+                }else{
+                    document.querySelector('#add').disabled = true;
+                }
+            }
+        </script>
+                
+        <center>
+            <font color="#0099ff"><h1>Neuen Eintrag hinzufügen</h1></font>
+            <button formaction="/home">Hautpmenü</button>
+                    
+            <table> 
+                <tr bgcolor="#FFFFFF">
+                    <td>Vorname</td>
+                    <td><input type="text" name="VN" id="VN" placeholder="Vorname" onkeyup="pushData()"></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td>Nachname</td>
+                    <td><input type="text" name="NN" id="NN" placeholder="Nachname" onkeyup="pushData()"></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td>Stadt</td>
+                    <td><input type="text" name="Stadt" id="Stadt" placeholder="Stadt" onkeyup="pushData()"></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td>Inhalt</td>
+                    <td><input type="text" name="Inhalt" id="Inhalt" placeholder="Inhalt" onkeyup="pushData()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button formaction="/home/added" id="add" disabled>Hinzufügen</button></td>
+                    <!-- <td><button formaction="/services/guestbook.php" id="add" disabled>Hinzufügen</button></td> -->
+                </tr>
+            </table>
+            <marquee width="260" height="55"><a href="https://www.shopware.com/" target="_blank"><img src="../shopware_trans.png" width="200" height="50"/></a></marquee>
+        </center>
+    </form>
+</body>
+</html>
+
+
+
+
